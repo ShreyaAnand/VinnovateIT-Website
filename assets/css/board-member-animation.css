@@ -6,14 +6,22 @@ ul {
     margin: 0;
     padding: 0;
     outline: none;
+    padding-right: 20px;
+    padding-bottom: 20px;
 }
 
 .mb50 {
     margin-bottom: 50px;
 }
 
+.mb9 {
+    margin-bottom: 9px;
+}
 
-/*3.4 Whos Speaking Area*/
+.no-border-on-link {
+    border-bottom: none;
+}
+
 .board-members .team {
     -webkit-transition: all 0.4s;
     -o-transition: all 0.4s;
@@ -62,7 +70,12 @@ ul {
 }
 
 .board-members .team .spk-img:before {
-    background: rgba(91, 69, 213, 0.8);
+    background-color: #935d8c;
+    background-image: url("images/overlay.png"), -moz-linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
+    background-image: url("images/overlay.png"), -webkit-linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
+    background-image: url("images/overlay.png"), -ms-linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
+    background-image: url("images/overlay.png"), linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
+    opacity: 0.85;
     content: "";
     position: absolute;
     width: 100%;
@@ -97,7 +110,7 @@ ul {
 .board-members .team .spk-img ul {
     position: absolute;
     display: inline-block;
-    top: 32%;
+    top: 30%;
     left: 23%;
     width: 100px;
     line-height: 3;
@@ -107,10 +120,7 @@ ul {
     transition: all 0.4s;
 }
 
-.board-members {
-    padding-bottom: 20px;
-    padding-right: 24px;
-}
+
 
 .board-members .team .spk-img ul:before {
     position: absolute;
@@ -119,7 +129,7 @@ ul {
     width: 110px;
     background: transparent;
     top: -4%;
-    left: -15px;
+    left: -15%;
     border: 1px solid #fff;
     -webkit-transform: rotate(44deg) scale(1.4);
     -ms-transform: rotate(44deg) scale(1.4);
@@ -1753,4 +1763,95 @@ ul {
 
 .shop button {
     top: 10px !important;
+}
+
+
+
+
+
+/* Board Member Tab CSS */
+
+/* For Mobile View */
+#content-desktop {
+    display: block;
+}
+
+#content-mobile {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+
+    #content-desktop {
+        display: none;
+    }
+
+    #content-mobile {
+        display: block;
+    }
+
+}
+
+h2 {
+    margin: 0px;
+    text-transform: uppercase;
+}
+
+h6 {
+    margin: 0px;
+    color: #777;
+}
+
+.wrapper {
+    text-align: center;
+    margin: 50px auto;
+}
+
+.tabs {
+    font-size: 15px;
+    padding: 0px;
+    list-style: none;
+    background: #fff;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    border-radius: 50px;
+    position: relative;
+}
+
+.tabs a {
+    text-decoration: none;
+    color: #777;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    transition-duration: 0.6s;
+}
+
+.tabs a.active {
+    color: #fff;
+}
+
+.tabs a i {
+    margin-right: 5px;
+}
+
+.tabs .selector {
+    height: 100%;
+    display: inline-block;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 1;
+    border-radius: 50px;
+    transition-duration: 0.6s;
+    transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    background-color: #935d8c;
+    background-image: url("images/overlay.png"), -moz-linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
+    background-image: url("images/overlay.png"), -webkit-linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
+    background-image: url("images/overlay.png"), -ms-linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
+    background-image: url("images/overlay.png"), linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#05abe0', endColorstr='#8200f4', GradientType=1);
 }
